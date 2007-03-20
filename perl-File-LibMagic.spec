@@ -5,15 +5,16 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	File
 %define	pnam	LibMagic
+#
 Summary:	File::LibMagic - Perlwrapper for libmagic
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	File::Libmagic - Moduł języka Perl opakowujący bibliotekę libmagic
 Name:		perl-File-LibMagic
 Version:	0.84
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/F/FI/FITZNER/File-LibMagic-0.84.tgz
+Source0:	http://www.cpan.org/modules/by-authors/id/F/FI/FITZNER/%{pdir}-%{pnam}-%{version}.tgz
 # Source0-md5:	39aa7fd522e41475b6291dd8bc4e2c9a
 URL:		http://search.cpan.org/dist/File-LibMagic/
 BuildRequires:	libmagic-devel
@@ -22,11 +23,11 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The File::LibMagic is a simple perl interface to libmagic from
-the file-4.x package from Christos Zoulas (ftp://ftp.astron.com/pub/file/).
+The File::LibMagic is a simple perl interface to libmagic library.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Moduł języka Perl File::LibMagic jest prostym interfejsem do
+biblioteki libmagic.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
