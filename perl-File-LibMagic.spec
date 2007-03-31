@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/File/*.pm
 %dir %{perl_vendorarch}/auto/File/LibMagic
-%attr(755,root,root) %{perl_vendorarch}/auto/File/LibMagic/*.ix
+%{perl_vendorarch}/auto/File/LibMagic/*.ix
 %attr(755,root,root) %{perl_vendorarch}/auto/File/LibMagic/*.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
