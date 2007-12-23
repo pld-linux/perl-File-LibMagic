@@ -9,13 +9,13 @@
 Summary:	File::LibMagic - Perlwrapper for libmagic
 Summary(pl.UTF-8):	File::Libmagic - Moduł języka Perl opakowujący bibliotekę libmagic
 Name:		perl-File-LibMagic
-Version:	0.84
+Version:	0.85
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/F/FI/FITZNER/%{pdir}-%{pnam}-%{version}.tgz
-# Source0-md5:	39aa7fd522e41475b6291dd8bc4e2c9a
+# Source0-md5:	037150b3131a566b518a7042f9a8d527
 URL:		http://search.cpan.org/dist/File-LibMagic/
 BuildRequires:	libmagic-devel
 BuildRequires:	perl-devel >= 1:5.8.0
