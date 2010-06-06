@@ -10,7 +10,7 @@ Summary:	File::LibMagic - Perlwrapper for libmagic
 Summary(pl.UTF-8):	File::Libmagic - Moduł języka Perl opakowujący bibliotekę libmagic
 Name:		perl-File-LibMagic
 Version:	0.96
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
