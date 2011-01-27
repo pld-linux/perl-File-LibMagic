@@ -20,6 +20,7 @@ URL:		http://search.cpan.org/dist/File-LibMagic/
 BuildRequires:	libmagic-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,6 +32,7 @@ biblioteki libmagic.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%{__sed} -i 's/ -lz//' Makefile.PL
 
 %build
 %{__perl} Makefile.PL \
