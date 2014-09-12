@@ -61,7 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/File/*.pm
 %dir %{perl_vendorarch}/auto/File/LibMagic
 %{perl_vendorarch}/auto/File/LibMagic/*.ix
-%{perl_vendorarch}/auto/File/LibMagic/*.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/File/LibMagic/*.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
