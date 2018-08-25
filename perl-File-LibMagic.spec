@@ -9,16 +9,17 @@
 Summary:	File::LibMagic - Perlwrapper for libmagic
 Summary(pl.UTF-8):	File::Libmagic - Moduł języka Perl opakowujący bibliotekę libmagic
 Name:		perl-File-LibMagic
-Version:	1.03
-Release:	6
+Version:	1.16
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	36b317bbb394af44aabb43a0b61e0bfa
+# Source0-md5:	de0cc720d1599428be01a7fa50a5cc5b
 URL:		http://search.cpan.org/dist/File-LibMagic/
 BuildRequires:	libmagic-devel
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Test-Fatal
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,9 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-cp -a example $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,4 +60,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/File/LibMagic
 %attr(755,root,root) %{perl_vendorarch}/auto/File/LibMagic/*.so
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}-%{version}
