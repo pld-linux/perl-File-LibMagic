@@ -8,17 +8,18 @@
 Summary:	File::LibMagic - Perlwrapper for libmagic
 Summary(pl.UTF-8):	File::Libmagic - Moduł języka Perl opakowujący bibliotekę libmagic
 Name:		perl-File-LibMagic
-Version:	1.16
-Release:	2
+Version:	1.23
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/authors/id/D/DR/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	de0cc720d1599428be01a7fa50a5cc5b
+# Source0-md5:	7782e6f80a67c931a2682145eca6e832
 URL:		http://search.cpan.org/dist/File-LibMagic/
 BuildRequires:	libmagic-devel
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Config-AutoConf
 BuildRequires:	perl-Test-Fatal
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -56,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README.md
 %{perl_vendorarch}/File/*.pm
+%dir %{perl_vendorarch}/File/LibMagic
+%{perl_vendorarch}/File/LibMagic/Constants.pm
 %dir %{perl_vendorarch}/auto/File/LibMagic
 %attr(755,root,root) %{perl_vendorarch}/auto/File/LibMagic/*.so
 %{_mandir}/man3/*
